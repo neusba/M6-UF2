@@ -4,7 +4,6 @@
 let array = ['verde', 'rojo', 'amarillo'];
 
 function funciones() {
-
     at();
     concat();
     constructor();
@@ -23,15 +22,11 @@ function funciones() {
     indexOf();
     isArray();
     join();
-
     keys();
     length();
     map();
     pop();
-    prototype();
     push();
-    reduce();
-    reduceRight();
     reverse();
     splice();
     shift();
@@ -171,5 +166,83 @@ function join() {
 }
 
 function keys() {
+    let frutas = ['manzana', 'banana', 'naranja'];
+    let keys = Object.keys(frutas);
 
+    document.getElementById('keys').innerHTML = `${frutas} -> Object.keys(frutas) -> ${keys}`;
+}
+
+function length() {
+    let long = array.length;
+    document.getElementById('lenght').innerHTML = `${array} -> array.length() -> ${long}`;
+}
+
+function map() {
+    let numeros = [1, 2, 3, 4, 5];
+    let numerosTriplicados = numeros.map(numero => numero * 3);
+
+    document.getElementById('map').innerHTML = `${numeros} -> numeros.map(numero => numero * 3) -> ${numerosTriplicados}`;
+}
+
+function pop() {
+    let numeros = [1, 2, 3, 4, 5];
+
+    document.getElementById('pop').innerHTML = `${numeros} -> numeros.pop() -> 5`;
+}
+
+function push() {
+    array.push('lila');
+
+    document.getElementById('push').innerHTML = `${array} -> array.push('lila') -> ${array}`;
+}
+
+function reverse() {
+    let arrayNuevo = array.reverse();
+
+    document.getElementById('reverse').innerHTML = `${array} -> array.reverse() -> ${arrayNuevo}`;
+}
+
+function splice() {
+    let numeros = [1, 2, 3, 4, 5];
+    let arrayNuevo = numeros.splice(1, 2);
+
+    document.getElementById('splice').innerHTML = `${numeros} -> numeros.splice(1, 2) -> 2, 3`;
+}
+
+function shift() {
+    document.getElementById('shift').innerHTML = `${array} -> array.shift() -> lila`;
+}
+
+function slice() {
+    let arrayNuevo = array.slice(1, 3);
+
+    document.getElementById('slice').innerHTML = `${array} -> array.slice(1, 3) -> ${arrayNuevo}`;
+}
+
+function some() {
+    let numeros = [10, 20, 30, 40, 50];
+    let resultado = numeros.some(numero => numero > 25);
+
+    document.getElementById('some').innerHTML = `${numeros} -> numeros.some(numero => numero > 25) -> ${resultado}`;
+}   
+
+function sort() {
+    document.getElementById('sort').innerHTML = `${array} -> array.sort() -> ${array.sort()}`;
+}
+
+function toString() {
+    let numeros = [10, 20, 30, 40, 50];
+    let arrayNuevo = numeros.toString();
+
+    document.getElementById('toString').innerHTML = `${numeros} -> numeros.toString() -> ${arrayNuevo}`;
+}
+
+function unshift() {
+    document.getElementById('unshift').innerHTML = `${array} -> array.unshift('naranja') -> 5`;
+}
+
+function valueOf() {
+    let valor = array.valueOf();
+
+    document.getElementById('valueOf').innerHTML = `${array} -> array.valueOf() -> ${valor}`;
 }
